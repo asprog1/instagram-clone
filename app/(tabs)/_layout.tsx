@@ -31,8 +31,13 @@ export default function TabLayout() {
         name="index"
         options={{
           title: "Home",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="house.fill" color={color} />
+          tabBarIcon: ({ color, focused }) => (
+            <IconSymbol
+              size={24}
+              name="home"
+              color={colorScheme === "dark" ? "white" : "black"}
+              focused={focused}
+            />
           ),
         }}
       />
@@ -40,8 +45,13 @@ export default function TabLayout() {
         name="explore"
         options={{
           title: "Explore",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="paperplane.fill" color={color} />
+          tabBarIcon: ({ color, focused }) => (
+            <IconSymbol
+              size={24}
+              name="search"
+              color={colorScheme === "dark" ? "white" : "black"}
+              focused={focused}
+            />
           ),
         }}
       />
